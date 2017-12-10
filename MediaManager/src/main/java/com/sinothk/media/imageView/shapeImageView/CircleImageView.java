@@ -1,4 +1,4 @@
-package com.sinothk.media.img.view.shapeImageView;
+package com.sinothk.media.imageView.shapeImageView;
 
 import android.content.Context;
 import android.graphics.Path;
