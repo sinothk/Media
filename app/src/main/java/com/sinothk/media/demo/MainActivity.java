@@ -7,10 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.sinothk.media.img.compress.CompressUtil;
 import com.sinothk.media.img.multiImageSelector.MultiImageSelector;
 import com.sinothk.media.img.multiImageSelector.MultiImageSelectorActivity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,13 +44,20 @@ public class MainActivity extends AppCompatActivity {
         // 选择照片返回
         try {
             if (data != null) {
-                ArrayList<String> path = data.getStringArrayListExtra(MultiImageSelectorActivity.EXTRA_RESULT);
+                ArrayList<String> pathList = data.getStringArrayListExtra(MultiImageSelectorActivity.EXTRA_RESULT);
 
                 String s = "";
-                for (int i = 0; i < path.size(); i++) {
-                    s += path.get(i);
+                for (int i = 0; i < pathList.size(); i++) {
+                    s += pathList.get(i);
                 }
                 textView.setText(s);
+
+                CompressUtil.compressPhotos(pathList, new CompressUtil.CompressCallback() {
+                    @Override
+                    public void onCompressed(List<String> imgPathList) {
+
+                    }
+                });
 //                imageProcessor!!.compressPhoto(2, path, imageCompressCallback)
             }
         } catch (Exception e) {
