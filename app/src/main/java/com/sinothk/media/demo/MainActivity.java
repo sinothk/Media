@@ -58,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 });
-//                imageProcessor!!.compressPhoto(2, path, imageCompressCallback)
             }
         } catch (Exception e) {
             e.printStackTrace();
