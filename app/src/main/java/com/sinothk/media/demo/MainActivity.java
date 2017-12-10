@@ -3,6 +3,7 @@ package com.sinothk.media.demo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -52,10 +53,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 textView.setText(s);
 
-                CompressUtil.compressPhotos(pathList, new CompressUtil.CompressCallback() {
+                CompressUtil.compressPhotos(pathList, new CompressUtil.CompressBack() {
                     @Override
                     public void onCompressed(List<String> imgPathList) {
-
+                        Log.e("压缩结果：", "path = " + imgPathList.toString());
                     }
                 });
             }

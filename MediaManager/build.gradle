@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.sinothk'
+group = 'com.github.sinothk'
 android {
     compileSdkVersion 25
     buildToolsVersion "27.0.1"
@@ -30,4 +30,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
     compile 'com.github.bumptech.glide:glide:3.7.0'
+    // 图片压缩
+    compile 'com.github.sinothk:compress:v1.1'
 }
