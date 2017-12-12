@@ -1,6 +1,7 @@
 package com.sinothk.media.img.multiImageSelector;
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.database.Cursor;
@@ -18,6 +19,7 @@ import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.support.v7.widget.ListPopupWindow;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -309,8 +311,23 @@ public class MultiImageSelectorFragment extends Fragment {
                 e.printStackTrace();
             }
             if (mTmpFile != null && mTmpFile.exists()) {
-                intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(mTmpFile));
-                startActivityForResult(intent, REQUEST_CAMERA);
+//                intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(mTmpFile));
+//                startActivityForResult(intent, REQUEST_CAMERA);
+
+                 /*获取当前系统的android版本号*/
+//                Android 7.0调用相机崩溃解决办法
+                int currentApiVersion = android.os.Build.VERSION.SDK_INT;
+                Log.e("currentApiVersion", "currentapiVersion====>" + currentApiVersion);
+                if (currentApiVersion < 24) {
+                    intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(mTmpFile));
+                    startActivityForResult(intent, REQUEST_CAMERA);
+                } else {
+                    ContentValues contentValues = new ContentValues(1);
+                    contentValues.put(MediaStore.Images.Media.DATA, mTmpFile.getAbsolutePath());
+                    Uri uri = getContext().getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
+                    intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
+                    startActivityForResult(intent, REQUEST_CAMERA);
+                }
             } else {
                 Toast.makeText(getActivity(), R.string.mis_error_image_not_exist, Toast.LENGTH_SHORT).show();
             }
