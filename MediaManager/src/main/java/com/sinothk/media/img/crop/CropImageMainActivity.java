@@ -59,8 +59,8 @@ public class CropImageMainActivity extends Activity {
 
         final CropImageView mCropImage = (CropImageView) findViewById(R.id.cropImg);
 
-//        mCropImage.setDrawable(BitmapDrawable.createFromPath(oldImgPath), 250, 250);
-        mCropImage.setDrawable(getResources().getDrawable(R.drawable.precrop), 250, 250);
+        mCropImage.setDrawable(BitmapDrawable.createFromPath(oldImgPath), 250, 250);
+//        mCropImage.setDrawable(getResources().getDrawable(R.drawable.precrop), 250, 250);
 
         findViewById(R.id.save).setOnClickListener(new OnClickListener() {
 
