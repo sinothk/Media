@@ -18,7 +18,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".preview.ImgPreviewMainDemoActivity">
+        <activity android:name=".crop.CropImageDemoMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,6 +37,10 @@
             android:configChanges="keyboardHidden|locale"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
+            android:name="com.sinothk.media.img.crop.CropImageMainActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

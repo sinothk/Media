@@ -17,4 +17,11 @@
     <string name="mis_permission_rationale">浏览图片需要您提供浏览存储的权限</string>
     <string name="mis_permission_rationale_write_storage">保存拍照图片需要您提供写存储权限</string>
     <string name="mis_action_button_string">%1$s(%2$d/%3$d)</string>
+
+    <!--============图片剪切==========-->
+    <string name="save">保存</string>
+    <string name="btn_text_1">底图缩放，浮层不变</string>
+    <string name="btn_text_2">底图不变，浮层移动</string>
+    <string name="btn_text_3">底图不变，浮层移动与缩放(长方形)</string>
+    <string name="btn_text_4">底图不变，浮层移动与缩放(正方形)</string>
 </resources>
