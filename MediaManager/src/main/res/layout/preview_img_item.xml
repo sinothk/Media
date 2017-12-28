@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sinothk.media.img.preview.GalleryImageViewRL xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/galleryTouchImageViewRL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+     <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+   <!-- <uk.co.senab.photoview.PhotoView
+        android:id="@+id/touchImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />-->
+
+    <!--<com.hxyc.app.libs.loading.Loading
+        android:id="@+id/loading"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerInParent="true"
+        app:gBackgroundColor="@color/white_alpha_16"
+        app:gForegroundColor="@color/white_alpha_240"
+        app:gForegroundLineSize="1dp" />-->
+
+</com.sinothk.media.img.preview.GalleryImageViewRL>
