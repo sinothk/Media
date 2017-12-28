@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## 媒体包括：图片选择，剪切，选择，预览的等功能。
 
 You can use the [editor on GitHub](https://github.com/sinothk/media/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
