@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import com.sinothk.media.R;
 import com.sinothk.media.img.crop.CropImageMainActivity;
 
-public class CropImageDemoMainActivity extends Activity {
+public class CropImageOnlyDemoMainActivity extends Activity {
 
     private final int requestCode = 100;
     private ImageView retImg;
@@ -53,7 +53,7 @@ public class CropImageDemoMainActivity extends Activity {
                     break;
             }
 
-            CropImageMainActivity.start(CropImageDemoMainActivity.this, "/storage/emulated/0/crop.png", requestCode, index);//
+            CropImageMainActivity.start(CropImageOnlyDemoMainActivity.this, "/storage/emulated/0/crop.png", requestCode, index);//
         }
     };
 
