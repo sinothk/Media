@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -32,6 +33,27 @@ public class CropImageMainActivity extends Activity {
         mIntent.putExtra("style", style);
         currActivity.startActivityForResult(mIntent, requestCode);
     }
+
+    /**
+     * =================Fragment===================
+     */
+    public static void start(Fragment currFragment, String imgPath, int requestCode) {
+        Intent mIntent = new Intent(currFragment.getContext(), CropImageMainActivity.class);
+        mIntent.putExtra("imgPath", imgPath);
+        mIntent.putExtra("style", STYLE_4);
+        currFragment.startActivityForResult(mIntent, requestCode);
+    }
+
+    public static void start(Fragment currFragment, String imgPath, int requestCode, int style) {
+        Intent mIntent = new Intent(currFragment.getContext(), CropImageMainActivity.class);
+        mIntent.putExtra("imgPath", imgPath);
+        mIntent.putExtra("style", style);
+        currFragment.startActivityForResult(mIntent, requestCode);
+    }
+
+    /**
+     * ====================================
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
