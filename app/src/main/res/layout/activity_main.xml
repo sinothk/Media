@@ -64,7 +64,7 @@
                         android:clickable="true"
                         android:src="@mipmap/qq9"
                         app:borderColor="#fff"
-                        app:borderWidth="5dp"
+                        app:borderWidths="5dp"
                         app:hoverColor="#22000000" />
                 </LinearLayout>
             </LinearLayout>
@@ -103,7 +103,7 @@
                         app:borderColor="#fff"
                         android:scaleType="centerCrop"
                         app:borderRadius="60dp"
-                        app:borderWidth="5dp" />
+                        app:borderWidths="5dp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
